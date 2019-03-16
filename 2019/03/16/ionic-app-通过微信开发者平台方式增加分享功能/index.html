@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ionic,微信开发者平台,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="lo0ong&#39;s world">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="一、注册微信开发者账号获取appID 二、填写安卓app的包名、应用签名和iOS的Bundle ID1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”123……&amp;lt;widget id=&quot;xx.xxx.xxxx&quot; version=&quot;1.0.1&quot; xmlns=&quot;http://www.w3.org/ns/widgets&quot; xmlns:cdv=&quot;http://cordova.a">
+<meta name="keywords" content="ionic,微信开发者平台">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ionic app 通过微信开发者平台方式增加分享功能">
+<meta property="og:url" content="http://yoursite.com/2019/03/16/ionic-app-通过微信开发者平台方式增加分享功能/index.html">
 <meta property="og:site_name" content="lo0ong&#39;s world">
+<meta property="og:description" content="一、注册微信开发者账号获取appID 二、填写安卓app的包名、应用签名和iOS的Bundle ID1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”123……&amp;lt;widget id=&quot;xx.xxx.xxxx&quot; version=&quot;1.0.1&quot; xmlns=&quot;http://www.w3.org/ns/widgets&quot; xmlns:cdv=&quot;http://cordova.a">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-16T10:51:27.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lo0ong&#39;s world">
+<meta name="twitter:title" content="ionic app 通过微信开发者平台方式增加分享功能">
+<meta name="twitter:description" content="一、注册微信开发者账号获取appID 二、填写安卓app的包名、应用签名和iOS的Bundle ID1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”123……&amp;lt;widget id=&quot;xx.xxx.xxxx&quot; version=&quot;1.0.1&quot; xmlns=&quot;http://www.w3.org/ns/widgets&quot; xmlns:cdv=&quot;http://cordova.a">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/16/ionic-app-通过微信开发者平台方式增加分享功能/">
 
 
 
 
 
-  <title>lo0ong's world</title>
+  <title>ionic app 通过微信开发者平台方式增加分享功能 | lo0ong's world</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/16/ionic-app-通过微信开发者平台方式增加分享功能/" itemprop="url">ionic app 通过微信开发者平台方式增加分享功能</a></h1>
+          <h1 class="post-title" itemprop="name headline">ionic app 通过微信开发者平台方式增加分享功能</h1>
         
 
         <div class="post-meta">
@@ -298,16 +300,12 @@
       
 
       
-        
-          
-            <h1 id="一、注册微信开发者账号"><a href="#一、注册微信开发者账号" class="headerlink" title="一、注册微信开发者账号"></a>一、注册微信开发者账号</h1><p>获取appID</p>
+        <h1 id="一、注册微信开发者账号"><a href="#一、注册微信开发者账号" class="headerlink" title="一、注册微信开发者账号"></a>一、注册微信开发者账号</h1><p>获取appID</p>
 <h1 id="二、填写安卓app的包名、应用签名和iOS的Bundle-ID"><a href="#二、填写安卓app的包名、应用签名和iOS的Bundle-ID" class="headerlink" title="二、填写安卓app的包名、应用签名和iOS的Bundle ID"></a>二、填写安卓app的包名、应用签名和iOS的Bundle ID</h1><h2 id="1、包名是config-xml文件中-下面那段的”xx-xxx-xxxx”"><a href="#1、包名是config-xml文件中-下面那段的”xx-xxx-xxxx”" class="headerlink" title="1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”"></a>1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">……</span><br><span class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"xx.xxx.xxxx"</span> <span class="attr">version</span>=<span class="string">"1.0.1"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/ns/widgets"</span> <span class="attr">xmlns:cdv</span>=<span class="string">"http://cordova.apache.org/ns/1.0"</span>&gt;</span></span><br><span class="line">……</span><br></pre></td></tr></table></figure>
 <h2 id="2、应用签名获取方式"><a href="#2、应用签名获取方式" class="headerlink" title="2、应用签名获取方式"></a>2、应用签名获取方式</h2><p>2.1 安装要添加分享功能的app</p>
 <p>2.2 <a href="https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android2.apk" target="_blank" rel="noopener">下载签名获取工具</a>，安装。输入上面的包名获取即可。</p>
 <h2 id="3、iOS的Bundle-ID"><a href="#3、iOS的Bundle-ID" class="headerlink" title="3、iOS的Bundle ID"></a>3、iOS的Bundle ID</h2><p>看xcode文件中的项目属性即可。</p>
 
-          
-        
       
     </div>
     
@@ -322,266 +320,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/16/ionic-app-通过微信开发者平台方式增加分享功能1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lo0ong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lo0ong's world">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/16/ionic-app-通过微信开发者平台方式增加分享功能1/" itemprop="url">ionic app 通过微信开发者平台方式增加分享功能</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-16T18:21:50+08:00">
-                2019-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/ionic-微信开发者平台/" rel="tag"># ionic,微信开发者平台</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一、注册微信开发者账号"><a href="#一、注册微信开发者账号" class="headerlink" title="一、注册微信开发者账号"></a>一、注册微信开发者账号</h1><p>获取appID<br><img src="https://i.loli.net/2019/03/16/5c8cd8478a8f5.png" alt></p>
-<h1 id="二、填写安卓app的包名、应用签名和iOS的Bundle-ID"><a href="#二、填写安卓app的包名、应用签名和iOS的Bundle-ID" class="headerlink" title="二、填写安卓app的包名、应用签名和iOS的Bundle ID"></a>二、填写安卓app的包名、应用签名和iOS的Bundle ID</h1><h2 id="1、包名是config-xml文件中-下面那段的”xx-xxx-xxxx”"><a href="#1、包名是config-xml文件中-下面那段的”xx-xxx-xxxx”" class="headerlink" title="1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”"></a>1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">……</span><br><span class="line"><span class="tag">&lt;<span class="name">widget</span> <span class="attr">id</span>=<span class="string">"xx.xxx.xxxx"</span> <span class="attr">version</span>=<span class="string">"1.0.1"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/ns/widgets"</span> <span class="attr">xmlns:cdv</span>=<span class="string">"http://cordova.apache.org/ns/1.0"</span>&gt;</span></span><br><span class="line">……</span><br></pre></td></tr></table></figure>
-<h2 id="2、应用签名获取方式"><a href="#2、应用签名获取方式" class="headerlink" title="2、应用签名获取方式"></a>2、应用签名获取方式</h2><p>2.1 安装要添加分享功能的app</p>
-<p>2.2 <a href="https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android2.apk" target="_blank" rel="noopener">下载签名获取工具</a>，安装。输入上面的包名获取即可。</p>
-<h2 id="3、iOS的Bundle-ID"><a href="#3、iOS的Bundle-ID" class="headerlink" title="3、iOS的Bundle ID"></a>3、iOS的Bundle ID</h2><p>看xcode文件中的项目属性即可。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lo0ong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lo0ong's world">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/16/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-16T09:48:53+08:00">
-                2019-03-16
-              </time>
+              <a href="/2019/03/16/ionic-app-通过微信开发者平台方式增加分享功能1/" rel="next" title="ionic app 通过微信开发者平台方式增加分享功能">
+                <i class="fa fa-chevron-left"></i> ionic app 通过微信开发者平台方式增加分享功能
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -591,10 +359,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -602,6 +371,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -622,8 +395,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -674,6 +456,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、注册微信开发者账号"><span class="nav-number">1.</span> <span class="nav-text">一、注册微信开发者账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、填写安卓app的包名、应用签名和iOS的Bundle-ID"><span class="nav-number">2.</span> <span class="nav-text">二、填写安卓app的包名、应用签名和iOS的Bundle ID</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、包名是config-xml文件中-下面那段的”xx-xxx-xxxx”"><span class="nav-number">2.1.</span> <span class="nav-text">1、包名是config.xml文件中,下面那段的”xx.xxx.xxxx”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、应用签名获取方式"><span class="nav-number">2.2.</span> <span class="nav-text">2、应用签名获取方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、iOS的Bundle-ID"><span class="nav-number">2.3.</span> <span class="nav-text">3、iOS的Bundle ID</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -807,6 +605,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
