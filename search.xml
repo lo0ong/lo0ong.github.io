@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[iOS 版app 开发记录]]></title>
-    <url>%2F2019%2F03%2F17%2FiOS-%E7%89%88app-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[1 购买开发者账号填写正确的信息，申请地址https://developer.apple.com/ 2 创建证书购买完成后登陆https://developer.apple.com/，点击account.再点击下图位置。 详见：https://www.jianshu.com/p/304ec98842e1 3配置Xcode 证书环境将证书配置到Xcode 的code siging或者登陆选择automatic。 4项目的样式，针对iOS进行优化4.1 更改app.module.ts,将样式强制展示位iOS,方便调试。1234567891011121314imports: [ BrowserModule, IonicModule.forRoot(MyApp,&#123; iconMode: 'ios', //安卓icon强制使用ios的icon以及样式 mode: 'ios', //样式强制使用ios样式 （安卓的是'md'） // nativeControlsForTouch: false, backButtonText:'', backButtonIcon: 'ios-arrow-back'&#125;), HttpModule, HttpClientModule, IonicStorageModule.forRoot(),], 4.2修复图文、直播、点播页面样式异常。例如article-detail.css 通过调试发现高度改为210px。 123456.artc&#123; .scroll-content&#123; margin-top: 210px; &#125;&#125; 4.3 修复iOS 端自动进入全屏播放给 video 标签加上 playsinline（iOS 10及以上）、webkit-playsinline（iOS 10之前）这两个属性。另外还需要在 config.xml 文件中加上1&lt;preference name="AllowInlineMediaPlayback" value="true" /&gt; 4.4 修复iOS 播放有2个进度条问题删掉video标签中的controls 4.5 修复iOS app 打开后头部状态栏空白问题在config.xml文件中加上123&lt;preference name="StatusBarOverlaysWebView" value="false" /&gt;&lt;preference name="StatusBarStyle" value="default" /&gt;]]></content>
-      <tags>
-        <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[20190317153341]]></title>
     <url>%2F2019%2F03%2F17%2F20190317153341%2F</url>
     <content type="text"></content>
@@ -25,6 +17,14 @@
       <tags>
         <tag>ionic</tag>
         <tag>微信开发者平台</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[iOS 版app 开发记录]]></title>
+    <url>%2F2019%2F03%2F04%2FiOS-%E7%89%88app-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[1 购买开发者账号填写正确的信息，申请地址https://developer.apple.com/ 2 创建证书购买完成后登陆https://developer.apple.com/，点击account.再点击下图位置。 详见：https://www.jianshu.com/p/304ec98842e1 3配置Xcode 证书环境将证书配置到Xcode 的code siging或者登陆选择automatic。 4项目的样式，针对iOS进行优化4.1 更改app.module.ts,将样式强制展示位iOS,方便调试。1234567891011121314imports: [ BrowserModule, IonicModule.forRoot(MyApp,&#123; iconMode: 'ios', //安卓icon强制使用ios的icon以及样式 mode: 'ios', //样式强制使用ios样式 （安卓的是'md'） // nativeControlsForTouch: false, backButtonText:'', backButtonIcon: 'ios-arrow-back'&#125;), HttpModule, HttpClientModule, IonicStorageModule.forRoot(),], 4.2修复图文、直播、点播页面样式异常。例如article-detail.css 通过调试发现高度改为210px。 123456.artc&#123; .scroll-content&#123; margin-top: 210px; &#125;&#125; 4.3 修复iOS 端自动进入全屏播放给 video 标签加上 playsinline（iOS 10及以上）、webkit-playsinline（iOS 10之前）这两个属性。另外还需要在 config.xml 文件中加上1&lt;preference name="AllowInlineMediaPlayback" value="true" /&gt; 4.4 修复iOS 播放有2个进度条问题删掉video标签中的controls 4.5 修复iOS app 打开后头部状态栏空白问题在config.xml文件中加上123&lt;preference name="StatusBarOverlaysWebView" value="false" /&gt;&lt;preference name="StatusBarStyle" value="default" /&gt;]]></content>
+      <tags>
+        <tag>iOS</tag>
       </tags>
   </entry>
 </search>

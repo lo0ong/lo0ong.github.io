@@ -281,135 +281,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/iOS-版app-开发记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lo0ong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lo0ong's world">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/17/iOS-版app-开发记录/" itemprop="url">iOS 版app 开发记录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T15:34:40+08:00">
-                2019-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1-购买开发者账号"><a href="#1-购买开发者账号" class="headerlink" title="1 购买开发者账号"></a>1 购买开发者账号</h1><p>填写正确的信息，申请地址<a href="https://developer.apple.com/" target="_blank" rel="noopener">https://developer.apple.com/</a></p>
-<h1 id="2-创建证书"><a href="#2-创建证书" class="headerlink" title="2 创建证书"></a>2 创建证书</h1><p>购买完成后登陆<a href="https://developer.apple.com/，点击account.再点击下图位置。" target="_blank" rel="noopener">https://developer.apple.com/，点击account.再点击下图位置。</a><br><img src="https://i.loli.net/2019/03/17/5c8df8f070d0b.png" alt></p>
-<p>详见：<br><a href="https://www.jianshu.com/p/304ec98842e1" target="_blank" rel="noopener">https://www.jianshu.com/p/304ec98842e1</a></p>
-<h1 id="3配置Xcode-证书环境"><a href="#3配置Xcode-证书环境" class="headerlink" title="3配置Xcode 证书环境"></a>3配置Xcode 证书环境</h1><p>将证书配置到Xcode 的code siging或者登陆选择automatic。</p>
-<h1 id="4项目的样式，针对iOS进行优化"><a href="#4项目的样式，针对iOS进行优化" class="headerlink" title="4项目的样式，针对iOS进行优化"></a>4项目的样式，针对iOS进行优化</h1><h2 id="4-1-更改app-module-ts-将样式强制展示位iOS-方便调试。"><a href="#4-1-更改app-module-ts-将样式强制展示位iOS-方便调试。" class="headerlink" title="4.1 更改app.module.ts,将样式强制展示位iOS,方便调试。"></a>4.1 更改app.module.ts,将样式强制展示位iOS,方便调试。</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">imports: [</span><br><span class="line">  BrowserModule,</span><br><span class="line">   IonicModule.forRoot(MyApp,&#123;</span><br><span class="line">   iconMode: <span class="string">'ios'</span>, <span class="comment">//安卓icon强制使用ios的icon以及样式</span></span><br><span class="line">  mode: <span class="string">'ios'</span>, <span class="comment">//样式强制使用ios样式 （安卓的是'md'）</span></span><br><span class="line">    <span class="comment">// nativeControlsForTouch: false,</span></span><br><span class="line">   backButtonText:<span class="string">''</span>,</span><br><span class="line">   backButtonIcon: <span class="string">'ios-arrow-back'</span></span><br><span class="line">&#125;),</span><br><span class="line">   HttpModule,</span><br><span class="line">   HttpClientModule,</span><br><span class="line">   IonicStorageModule.forRoot(),</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
-<h2 id="4-2修复图文、直播、点播页面样式异常。"><a href="#4-2修复图文、直播、点播页面样式异常。" class="headerlink" title="4.2修复图文、直播、点播页面样式异常。"></a>4.2修复图文、直播、点播页面样式异常。</h2><p>例如article-detail.css 通过调试发现高度改为210px。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.artc</span>&#123;</span><br><span class="line">   <span class="selector-class">.scroll-content</span>&#123;</span><br><span class="line">      <span class="attribute">margin-top</span>: <span class="number">210px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-3-修复iOS-端自动进入全屏播放"><a href="#4-3-修复iOS-端自动进入全屏播放" class="headerlink" title="4.3 修复iOS 端自动进入全屏播放"></a>4.3 修复iOS 端自动进入全屏播放</h2><p>给 video 标签加上 playsinline（iOS 10及以上）、webkit-playsinline（iOS 10之前）这两个属性。另外还需要在 config.xml 文件中加上<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">preference</span> <span class="attr">name</span>=<span class="string">"AllowInlineMediaPlayback"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="4-4-修复iOS-播放有2个进度条问题"><a href="#4-4-修复iOS-播放有2个进度条问题" class="headerlink" title="4.4 修复iOS 播放有2个进度条问题"></a>4.4 修复iOS 播放有2个进度条问题</h2><p>删掉video标签中的controls<br><img src="https://i.loli.net/2019/03/17/5c8df93800ce1.png" alt></p>
-<h2 id="4-5-修复iOS-app-打开后头部状态栏空白问题"><a href="#4-5-修复iOS-app-打开后头部状态栏空白问题" class="headerlink" title="4.5 修复iOS app 打开后头部状态栏空白问题"></a>4.5 修复iOS app 打开后头部状态栏空白问题</h2><p>在config.xml文件中加上<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">preference</span> <span class="attr">name</span>=<span class="string">"StatusBarOverlaysWebView"</span> <span class="attr">value</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">preference</span> <span class="attr">name</span>=<span class="string">"StatusBarStyle"</span> <span class="attr">value</span>=<span class="string">"default"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/20190317153341/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -729,6 +600,135 @@
         
       
     </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/04/iOS-版app-开发记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lo0ong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lo0ong's world">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/04/iOS-版app-开发记录/" itemprop="url">iOS 版app 开发记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T15:34:40+08:00">
+                2019-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-购买开发者账号"><a href="#1-购买开发者账号" class="headerlink" title="1 购买开发者账号"></a>1 购买开发者账号</h1><p>填写正确的信息，申请地址<a href="https://developer.apple.com/" target="_blank" rel="noopener">https://developer.apple.com/</a></p>
+<h1 id="2-创建证书"><a href="#2-创建证书" class="headerlink" title="2 创建证书"></a>2 创建证书</h1><p>购买完成后登陆<a href="https://developer.apple.com/，点击account.再点击下图位置。" target="_blank" rel="noopener">https://developer.apple.com/，点击account.再点击下图位置。</a><br><img src="https://i.loli.net/2019/03/17/5c8df8f070d0b.png" alt></p>
+<p>详见：<br><a href="https://www.jianshu.com/p/304ec98842e1" target="_blank" rel="noopener">https://www.jianshu.com/p/304ec98842e1</a></p>
+<h1 id="3配置Xcode-证书环境"><a href="#3配置Xcode-证书环境" class="headerlink" title="3配置Xcode 证书环境"></a>3配置Xcode 证书环境</h1><p>将证书配置到Xcode 的code siging或者登陆选择automatic。</p>
+<h1 id="4项目的样式，针对iOS进行优化"><a href="#4项目的样式，针对iOS进行优化" class="headerlink" title="4项目的样式，针对iOS进行优化"></a>4项目的样式，针对iOS进行优化</h1><h2 id="4-1-更改app-module-ts-将样式强制展示位iOS-方便调试。"><a href="#4-1-更改app-module-ts-将样式强制展示位iOS-方便调试。" class="headerlink" title="4.1 更改app.module.ts,将样式强制展示位iOS,方便调试。"></a>4.1 更改app.module.ts,将样式强制展示位iOS,方便调试。</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">imports: [</span><br><span class="line">  BrowserModule,</span><br><span class="line">   IonicModule.forRoot(MyApp,&#123;</span><br><span class="line">   iconMode: <span class="string">'ios'</span>, <span class="comment">//安卓icon强制使用ios的icon以及样式</span></span><br><span class="line">  mode: <span class="string">'ios'</span>, <span class="comment">//样式强制使用ios样式 （安卓的是'md'）</span></span><br><span class="line">    <span class="comment">// nativeControlsForTouch: false,</span></span><br><span class="line">   backButtonText:<span class="string">''</span>,</span><br><span class="line">   backButtonIcon: <span class="string">'ios-arrow-back'</span></span><br><span class="line">&#125;),</span><br><span class="line">   HttpModule,</span><br><span class="line">   HttpClientModule,</span><br><span class="line">   IonicStorageModule.forRoot(),</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<h2 id="4-2修复图文、直播、点播页面样式异常。"><a href="#4-2修复图文、直播、点播页面样式异常。" class="headerlink" title="4.2修复图文、直播、点播页面样式异常。"></a>4.2修复图文、直播、点播页面样式异常。</h2><p>例如article-detail.css 通过调试发现高度改为210px。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.artc</span>&#123;</span><br><span class="line">   <span class="selector-class">.scroll-content</span>&#123;</span><br><span class="line">      <span class="attribute">margin-top</span>: <span class="number">210px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-3-修复iOS-端自动进入全屏播放"><a href="#4-3-修复iOS-端自动进入全屏播放" class="headerlink" title="4.3 修复iOS 端自动进入全屏播放"></a>4.3 修复iOS 端自动进入全屏播放</h2><p>给 video 标签加上 playsinline（iOS 10及以上）、webkit-playsinline（iOS 10之前）这两个属性。另外还需要在 config.xml 文件中加上<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">preference</span> <span class="attr">name</span>=<span class="string">"AllowInlineMediaPlayback"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="4-4-修复iOS-播放有2个进度条问题"><a href="#4-4-修复iOS-播放有2个进度条问题" class="headerlink" title="4.4 修复iOS 播放有2个进度条问题"></a>4.4 修复iOS 播放有2个进度条问题</h2><p>删掉video标签中的controls<br><img src="https://i.loli.net/2019/03/17/5c8df93800ce1.png" alt></p>
+<h2 id="4-5-修复iOS-app-打开后头部状态栏空白问题"><a href="#4-5-修复iOS-app-打开后头部状态栏空白问题" class="headerlink" title="4.5 修复iOS app 打开后头部状态栏空白问题"></a>4.5 修复iOS app 打开后头部状态栏空白问题</h2><p>在config.xml文件中加上<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">preference</span> <span class="attr">name</span>=<span class="string">"StatusBarOverlaysWebView"</span> <span class="attr">value</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">preference</span> <span class="attr">name</span>=<span class="string">"StatusBarStyle"</span> <span class="attr">value</span>=<span class="string">"default"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
     
     
     
