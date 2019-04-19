@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="购买开发者账号填写正确的信息，申请地址https://developer.apple.com/">
+<meta name="description" content="购买开发者账号填写正确的信息，申请地址https://developer.apple.com/ 创建证书购买完成后登陆https://developer.apple.com/，点击account.再点击下图位置。 详见：https://www.jianshu.com/p/304ec98842e1">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 版app 开发记录">
 <meta property="og:url" content="http://yoursite.com/2019/03/04/iOS-版app-开发记录/index.html">
 <meta property="og:site_name" content="lo0ong&#39;s world">
-<meta property="og:description" content="购买开发者账号填写正确的信息，申请地址https://developer.apple.com/">
+<meta property="og:description" content="购买开发者账号填写正确的信息，申请地址https://developer.apple.com/ 创建证书购买完成后登陆https://developer.apple.com/，点击account.再点击下图位置。 详见：https://www.jianshu.com/p/304ec98842e1">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/03/17/5c8df8f070d0b.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/17/5c8df93800ce1.png">
-<meta property="og:updated_time" content="2019-03-19T13:47:57.726Z">
+<meta property="og:updated_time" content="2019-04-19T09:39:14.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 版app 开发记录">
-<meta name="twitter:description" content="购买开发者账号填写正确的信息，申请地址https://developer.apple.com/">
+<meta name="twitter:description" content="购买开发者账号填写正确的信息，申请地址https://developer.apple.com/ 创建证书购买完成后登陆https://developer.apple.com/，点击account.再点击下图位置。 详见：https://www.jianshu.com/p/304ec98842e1">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/17/5c8df8f070d0b.png">
 
 
@@ -355,9 +355,9 @@
       
 
       
-        <h1 id="购买开发者账号"><a href="#购买开发者账号" class="headerlink" title="购买开发者账号"></a>购买开发者账号</h1><p>填写正确的信息，申请地址<a href="https://developer.apple.com/" target="_blank" rel="noopener">https://developer.apple.com/</a><br><a id="more"></a></p>
+        <h1 id="购买开发者账号"><a href="#购买开发者账号" class="headerlink" title="购买开发者账号"></a>购买开发者账号</h1><p>填写正确的信息，申请地址<a href="https://developer.apple.com/" target="_blank" rel="noopener">https://developer.apple.com/</a></p>
 <h1 id="创建证书"><a href="#创建证书" class="headerlink" title="创建证书"></a>创建证书</h1><p>购买完成后登陆<a href="https://developer.apple.com/，点击account.再点击下图位置。" target="_blank" rel="noopener">https://developer.apple.com/，点击account.再点击下图位置。</a><br><img src="https://i.loli.net/2019/03/17/5c8df8f070d0b.png" alt></p>
-<p>详见：<br><a href="https://www.jianshu.com/p/304ec98842e1" target="_blank" rel="noopener">https://www.jianshu.com/p/304ec98842e1</a></p>
+<p>详见：<br><a href="https://www.jianshu.com/p/304ec98842e1" target="_blank" rel="noopener">https://www.jianshu.com/p/304ec98842e1</a><br><a id="more"></a></p>
 <h1 id="配置Xcode-证书环境"><a href="#配置Xcode-证书环境" class="headerlink" title="配置Xcode 证书环境"></a>配置Xcode 证书环境</h1><p>将证书配置到Xcode 的code siging或者登陆选择automatic。</p>
 <h1 id="项目的样式，针对iOS进行优化"><a href="#项目的样式，针对iOS进行优化" class="headerlink" title="项目的样式，针对iOS进行优化"></a>项目的样式，针对iOS进行优化</h1><h2 id="更改app-module-ts-将样式强制展示位iOS-方便调试。"><a href="#更改app-module-ts-将样式强制展示位iOS-方便调试。" class="headerlink" title="更改app.module.ts,将样式强制展示位iOS,方便调试。"></a>更改app.module.ts,将样式强制展示位iOS,方便调试。</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">imports: [</span><br><span class="line">  BrowserModule,</span><br><span class="line">   IonicModule.forRoot(MyApp,&#123;</span><br><span class="line">   iconMode: <span class="string">'ios'</span>, <span class="comment">//安卓icon强制使用ios的icon以及样式</span></span><br><span class="line">  mode: <span class="string">'ios'</span>, <span class="comment">//样式强制使用ios样式 （安卓的是'md'）</span></span><br><span class="line">    <span class="comment">// nativeControlsForTouch: false,</span></span><br><span class="line">   backButtonText:<span class="string">''</span>,</span><br><span class="line">   backButtonIcon: <span class="string">'ios-arrow-back'</span></span><br><span class="line">&#125;),</span><br><span class="line">   HttpModule,</span><br><span class="line">   HttpClientModule,</span><br><span class="line">   IonicStorageModule.forRoot(),</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
 <h2 id="修复图文、直播、点播页面样式异常。"><a href="#修复图文、直播、点播页面样式异常。" class="headerlink" title="修复图文、直播、点播页面样式异常。"></a>修复图文、直播、点播页面样式异常。</h2><p>例如article-detail.css 通过调试发现高度改为210px。</p>
