@@ -5,7 +5,8 @@
     <url>%2F2019%2F04%2F19%2Fvue-%E9%80%9A%E8%BF%87el-%2F</url>
     <content type="text"><![CDATA[前台页面html123456789101112131415161718192021&lt;!-- 表单 --&gt;&lt;el-input type="textarea" :autosize="&#123; minRows: 2&#125;" placeholder="请输入更新内容" v-model="input"&gt;&lt;/el-input&gt;&lt;el-upload class="upload-demo" drag :on-success="handleAvatarSuccess" :on-remove="handleRemove" :limit="1" ref="upload" multiple :file-list="fileList" :before-upload="before_Upload" action="xxxxxxxxxx" &gt; &lt;!-- xxxx 填上传接口--&gt; &lt;i class="el-icon-upload"&gt;&lt;/i&gt; &lt;div class="el-upload__text"&gt; 将文件拖到此处，或 &lt;em&gt;点击上传&lt;/em&gt; &lt;/div&gt;&lt;/el-upload&gt; 参数设置和上传方法 核心代码12345678910111213before_Upload(file) &#123;//这里的file一定要写 let FormDatas = new FormData(); FormDatas.append("file", file); //要上传的文件 FormDatas.append("key", this.input); //增加参数 console.log("FormDatas1", FormDatas); this.$http .post("xxxxxxxxxx", FormDatas) // 填与上面相同的接口 .then(response =&gt; &#123; this.close(); (this.fileList = []), (this.input = ""); console.log("success", response.resultMsg); &#125;);&#125;,]]></content>
       <tags>
-        <tag>-- vue -- element</tag>
+        <tag>vue</tag>
+        <tag>element</tag>
       </tags>
   </entry>
   <entry>
