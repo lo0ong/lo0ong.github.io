@@ -81,7 +81,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="lo0ong&#39;s world">
-<meta property="og:url" content="http://yoursite.com/tags/vue/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Vue/index.html">
 <meta property="og:site_name" content="lo0ong&#39;s world">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -115,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/vue/">
+  <link rel="canonical" href="http://yoursite.com/tags/Vue/">
 
 
 
 
 
-  <title>标签: vue | lo0ong's world</title>
+  <title>标签: Vue | lo0ong's world</title>
   
 
 
@@ -273,7 +273,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>vue<small>标签</small>
+        <h1>Vue<small>标签</small>
         </h1>
       </div>
 
@@ -285,43 +285,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/09/08/Vue组件传值方法/" itemprop="url">
+            <a class="post-title-link" href="/2019/11/17/Vue实现语音播报/" itemprop="url">
               
-                <span itemprop="name">Vue组件传值方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-08T09:19:47+08:00" content="2019-09-08">
-          09-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/19/vue-通过el-/" itemprop="url">
-              
-                <span itemprop="name">vue 通过el-upload上传文件同时传其他参数</span>
+                <span itemprop="name">Vue实现语音播报</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-19T18:04:39+08:00" content="2019-04-19">
-          04-19
+        <time class="post-time" itemprop="dateCreated" datetime="2019-11-17T11:24:18+08:00" content="2019-11-17">
+          11-17
         </time>
       </div>
 
@@ -381,7 +355,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -394,7 +368,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -913,6 +887,50 @@
     }
 
     // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+opup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
       if (isfetched === false) {
