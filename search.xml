@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Vue实现语音播报]]></title>
     <url>%2F2019%2F11%2F17%2FVue%E5%AE%9E%E7%8E%B0%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%8A%A5%2F</url>
-    <content type="text"><![CDATA[调研百度123new Audio( 'http://tts.baidu.com/text2audio?cuid=baiduid&amp;lan=zh&amp;ctp=1&amp;pdt=311&amp;tex=测试').play();]]></content>
+    <content type="text"><![CDATA[调研百度语音播放接口123new Audio( 'http://tts.baidu.com/text2audio?cuid=baiduid&amp;lan=zh&amp;ctp=1&amp;pdt=311&amp;tex=测试').play();]]></content>
       <tags>
         <tag>Vue</tag>
       </tags>
